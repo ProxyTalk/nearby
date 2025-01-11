@@ -105,6 +105,7 @@ cc_library(
         "wifi_hotspot_native.h",
         "wifi_intel.h",
         "wifi_lan.h",
+        "wifi_lan_mdns.h",
     ],
     copts = ["-DNO_INTEL_PIE"],
     visibility = ["//visibility:private"],
@@ -155,10 +156,7 @@ cc_library(
     hdrs = [
         "string_utils.h",
     ],
-    visibility = [
-        "//internal/platform:__subpackages__",
-        "//location/nearby:__subpackages__",
-    ],
+    visibility = ["//location/nearby:__subpackages__"],
     deps = [
         "//internal/platform:logging",
         "@com_google_absl//absl/strings",
@@ -207,6 +205,7 @@ cc_library(
         "wifi_hotspot_server_socket.cc",
         "wifi_hotspot_socket.cc",
         "wifi_intel.cc",
+        "wifi_lan_mdns.cc",
         "wifi_lan_medium.cc",
         "wifi_lan_server_socket.cc",
         "wifi_lan_socket.cc",
@@ -225,7 +224,6 @@ cc_library(
         "//chrome/chromeos/assistant/data_migration/lib:__pkg__",
         "//connections:__subpackages__",
         "//connections:partners",
-        "//fastpair:__subpackages__",
         "//internal/platform:__subpackages__",
         "//location/nearby:__subpackages__",
         "//presence:__subpackages__",

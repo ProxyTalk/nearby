@@ -150,7 +150,6 @@ cc_library(
     ],
     visibility = [
         "//connections/implementation:__subpackages__",
-        "//fastpair:__subpackages__",
         "//internal/platform/implementation:__subpackages__",
         "//presence:__subpackages__",
     ],
@@ -245,7 +244,6 @@ cc_library(
     ],
     visibility = [
         "//connections:__subpackages__",
-        "//fastpair:__subpackages__",
         "//internal/account:__subpackages__",
         "//internal/auth:__subpackages__",
         "//internal/auth/credential_store:__subpackages__",
@@ -320,7 +318,6 @@ cc_library(
     ],
     visibility = [
         "//connections:__subpackages__",
-        "//fastpair:__subpackages__",
         "//internal/platform/implementation:__subpackages__",
         "//internal/test:__subpackages__",
         "//presence:__subpackages__",
@@ -355,7 +352,6 @@ cc_library(
     ],
     visibility = [
         "//connections:__subpackages__",
-        "//fastpair:__subpackages__",
         "//internal/platform/implementation:__subpackages__",
         "//presence:__subpackages__",
     ],
@@ -407,6 +403,7 @@ cc_test(
         ":base",
         ":util",
         "@com_github_protobuf_matchers//protobuf-matchers",
+        "@com_google_absl//absl/strings:string_view",
         "@com_google_googletest//:gtest_main",
     ],
 )
