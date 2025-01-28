@@ -30,7 +30,7 @@ constexpr absl::string_view kConfigPackage = "nearby";
 namespace nearby_connections_feature {
 // The timeout in millis to report peripheral device lost.
 constexpr auto kBlePeripheralLostTimeoutMillis =
-    flags::Flag<int64_t>(kConfigPackage, "45411439", 5000);
+    flags::Flag<int64_t>(kConfigPackage, "45411439", 250);
 // When true, disable Bluetooth classic scanning.
 constexpr auto kDisableBluetoothClassicScanning =
     flags::Flag<bool>(kConfigPackage, "45639961", false);
